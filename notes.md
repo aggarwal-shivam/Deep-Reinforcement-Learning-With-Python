@@ -35,4 +35,28 @@
     - Discount factor ranges from 0 to 1. A high discount factor means, we will give high importance to the future rewards, while a low discount factor means that we will give more importance to the immediate rewards.
     - Discount factor 0 means: agent will only learn the immediate reward
     - Discount factor 1 means: agent will learn till infinity
-- 
+- Value function
+  - also known as the state value function, denotes the value of a state.
+  - It tells what reward, the agent would obtain, starting from that state following some policy. 
+  - Instead of directly taking the value of a state, we will take the expected return. It will help in case of stochastic policies.
+  - So the value of a state is the expected return of the trajectory, starting from that state.
+- Q function
+  - Almost similar to the value function. The only difference is that here, we will calculate the return of a state-action pair, while in the calculation of the value function, we calculated the return of a state.
+  - Similar to the value function, instead of using the direct value, we will use the expected value of the return.
+  - Like the value function, Q function depends on the policy.
+  - There can be many Q functions based on different policies. Optimal Q function is the one with the highest value, known as Q*
+- Model based and Model Free Learning
+  - Model based: The agent knows all the dynamics of the environment
+  - Model free: The agent knows nothing about the environment
+- Types of Environments
+  - Deterministic and Stochastic environment
+    - Deterministic: when we are sure that an action from a state s always lead to a state s'
+    - Stochastic: When there is a randomness associated with the actions from a state
+  - Discrete and Continuous environment
+    - Discrete: When the action space of the env is discrete
+    - Continuous: When the action space of the env is continuous
+  - Episodic and Non-episodic env
+    - Episodic: when agent's actions doesn't affect the future outcome
+    - Non-episodic: When agent's actions affect the future outcome
+  - Single and Multi-agent env
+    - Depends on the number of agents in the environment.
